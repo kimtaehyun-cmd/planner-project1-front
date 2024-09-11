@@ -4,6 +4,7 @@ import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 const mapContainerStyle = {
   width: '50%',
   height: '600px',
+  marginLeft: '5%',
 };
 
 const center = {

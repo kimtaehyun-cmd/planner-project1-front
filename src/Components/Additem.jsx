@@ -16,7 +16,7 @@ const Additem = () => {
         <div className="Additem_wrapper w-full h-auto p-[0.25rem]">
           <div className="Additem_container w-full h-full flex items-center justify-center mt-0 rounded-md text-4xl font-semibold">
             <button
-              className="flex items-center gap-x-2 group"
+              className="flex items-center gap-x-2 group transform transition duration-300 hover:scale-105"
               onClick={handleOpenModal}
             >
               <div className="border border-gray-500 rounded-md flex gap-2 p-3 mt-10">

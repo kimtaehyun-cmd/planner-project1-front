@@ -45,7 +45,7 @@ const TravelProjectList = () => {
     <div className="w-1/3 p-4 border-r h-full border-gray-300">
       <div className="sidebar-wrapper h-full flex flex-col">
         <div className="project_side_bar_box bg-white p-4 rounded-lg shadow-custom h-full">
-          <h2 className="text-xl font-bold mb-4 pl-8 ">
+          <h2 className="text-xl font-bold mb-4 pl-7 ">
             {authData.name}님 여행정보
           </h2>
           <div className="inner-sidebar-wrapper flex flex-col h-full">
@@ -76,7 +76,7 @@ const TravelProjectList = () => {
                     </Link>
                   ))
                 ) : (
-                  <div>여행 제목 없음</div>
+                  <div className="font-bold pl-3">여행 정보 없음</div>
                 )}
               </div>
               <div className="bg-slate-300 p-1 m-2 rounded flex flex-col items-center shadow-md">

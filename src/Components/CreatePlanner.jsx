@@ -115,7 +115,7 @@ const Createplanner = () => {
             <div className="w-[45%] h-[60%] bg-white rounded-3xl shadow-lg border border-gray-700">
               <div className="input-wrapper bg-gray-100 shadow-lg rounded-3xl flex flex-col w-full h-full items-center gap-1 ">
                 <div className="flex w-[90%]">
-                  <div className="top w-full p-2 font-bold text-4xl flex justify-between mt-6 ">
+                  <div className="top w-full p-4 font-bold text-4xl flex justify-between mt-6 border-b-2 border-gray-600">
                     <div className="flex items-center rounded-md">
                       <TfiWrite className="mr-2" />
                       <p>My Travel Planner</p>
@@ -147,7 +147,7 @@ const Createplanner = () => {
                         placeholder="제목을 입력해주세요."
                         value={projectTitle} // 입력된 제목을 상태에서 가져옴
                         onChange={handleChange} // 제목 입력 시 상태 업데이트
-                        className="Logo_text bg-white w-full rounded-md text-gray-600 input-placeholder p-3 border border-slate-300"
+                        className="Logo_text bg-white w-full rounded-md text-gray-800 input-placeholder p-3 border border-slate-300"
                       />
                       <input
                         type="date"

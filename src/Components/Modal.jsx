@@ -84,17 +84,16 @@ const Modal = ({ handleSave }) => {
     event.preventDefault();
 
     if (!planner_data.planner_title) {
-      // 제목이 비어 있을 때 토스트 알림 표시
       toast.error('프로젝트 제목을 입력해주세요!', {
         position: 'top-center',
-        autoClose: 3000, // 3초 후 자동 닫힘
+        autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
       });
-      return; // 제목이 비어있으면 함수 종료
+      return;
     }
 
     try {
@@ -118,10 +117,10 @@ const Modal = ({ handleSave }) => {
       if (response.status === 200 || response.status === 201) {
         const savedData = {
           ...planner_data,
-          planner_img: response.data.planner_img, // 서버에서 반환된 이미지 URL로 업데이트
+          planner_img: response.data.planner_img,
         };
-        handleSave(savedData); // PlannerBar로 데이터 전달
-        handleCloseModal(); // 모달 닫기
+        handleSave(savedData);
+        handleCloseModal();
       } else {
         console.error('데이터 저장 오류:', response.status);
       }
@@ -140,37 +139,41 @@ const Modal = ({ handleSave }) => {
     <>
       <div className="Modal_page fixed top-0 bottom-0 left-0 right-0 flex items-center justify-center z-50">
         <div className="Modal_wrapper w-[55%] h-[70%] bg-gray-100 rounded-md shadow-lg border border-gray-700 flex flex-col">
-          <div className="flex w-full">
-            <div className="Modal_container w-full flex flex-col px-3 ">
+          <div className="flex w-full h-[99%]">
+            <div className="Modal_container w-full flex flex-col px-3">
               <div className="top w-full text-center p-4 font-bold text-4xl flex justify-between">
                 <div className="flex items-center rounded-md">
                   <TfiWrite className="mr-2" />
-                  <p>My Travel Planner</p> {/* 타이틀 */}
+                  <p>My Travel Planner</p>
                 </div>
-                <button
-                  onClick={handleMain} // 버튼 클릭 시 메인 페이지로 이동
-                  type="button"
-                >
+                <button onClick={handleMain} type="button">
                   <MdClose className="Logo_image_svg hover:bg-slate-300 rounded-md" />
                 </button>
               </div>
-              <div className="location border rounded-md border-gray-400 bg-white mb-4 p-4 w-full h-1/6 flex justify-center items-center">
-                <div className="input-control  w-full h-full ">
+
+              {/* 제목 부분의 높이를 줄임 */}
+              <div className="location border rounded-md border-gray-400 bg-white mb-2 p-4 w-full h-[10%] flex justify-center items-center">
+                <div className="input-control w-full h-full">
                   <label htmlFor="planner_title" className="w-full h-full">
                     <input
                       type="text"
                       id="planner_title"
                       name="planner_title"
                       placeholder="프로젝트 제목을 입력해주세요..."
-                      className="w-full h-full rounded bg-white p-2"
+                      className="w-full h-full rounded bg-white p-2 text-2xl font-bold"
                       value={planner_data.planner_title}
                       onChange={handleChange}
+                      style={{
+                        fontFamily: 'Courgette',
+                      }}
                     />
                   </label>
                 </div>
               </div>
-              <div className="content  h-1/2 mb-10 flex gap-2">
-                <div className="photo_wrapper border rounded-md border-gray-400 bg-white w-1/2 h-80 flex items-center justify-center relative overflow-hidden">
+
+              {/* 이미지와 설명 부분 높이를 더 키움 */}
+              <div className="content h-[80%] mb-2 flex gap-2">
+                <div className="photo_wrapper border rounded-md border-gray-400 bg-white w-1/2 h-full flex items-center justify-center relative overflow-hidden">
                   {imagePreview ? (
                     <img
                       src={imagePreview}
@@ -189,8 +192,9 @@ const Modal = ({ handleSave }) => {
                     className="absolute inset-0 opacity-0 cursor-pointer"
                   />
                 </div>
-                <div className="text border rounded-md border-gray-400  w-1/2 h-80 flex justify-center items-center ">
-                  <div className="input-control w-full h-full ">
+
+                <div className="text border rounded-md border-gray-400 w-1/2 h-full flex justify-center items-center">
+                  <div className="input-control w-full h-full">
                     <label
                       htmlFor="planner_description"
                       className="w-full h-full"
@@ -200,40 +204,47 @@ const Modal = ({ handleSave }) => {
                         id="planner_description"
                         name="planner_description"
                         placeholder="내용을 입력해주세요..."
-                        className="w-full h-full bg-white rounded px-2 resize-none"
+                        className="w-full h-full bg-white rounded px-2 resize-none text-xl font-semibold text-gray-600"
                         value={planner_data.planner_description}
                         onChange={handleChange}
-                        maxLength="300"
+                        maxLength="400"
+                        style={{
+                          fontFamily: 'Courgette',
+                        }}
                       />
                     </label>
                   </div>
                 </div>
               </div>
-              <div className="date border rounded-md border-gray-400 w-full h-16 flex justify-center items-center">
+
+              <div className="date border rounded-md border-gray-400 w-full h-16 flex justify-center items-center mb-2">
                 <div className="input-control w-full h-full flex items-center justify-center">
                   <input
                     type="datetime-local"
                     id="planner_date"
                     name="planner_date"
-                    className="w-full h-full bg-white rounded-md p-2"
+                    className="w-full h-full bg-white rounded-md p-2 text-2xl font-semibold"
                     value={planner_data.planner_date}
                     onChange={handlePlanner_dateChange}
                   />
                 </div>
               </div>
+
+              {/* 버튼을 하단에 배치 */}
+              <div className="Save_button_container flex items-end justify-end">
+                <button
+                  type="submit"
+                  onClick={handleSubmit}
+                  className="Sign_up rounded-md shadow-lg bg-gradient-to-r from-gray-700 to-gray-900 text-white hover:opacity-90 text-xl py-2 px-4"
+                >
+                  {modalType === 'update' ? '수정완료' : '할일 추가하기'}
+                </button>
+              </div>
             </div>
-          </div>
-          <div className="Save_button_container flex items-end justify-end p-2">
-            <button
-              type="submit"
-              onClick={handleSubmit}
-              className="Sign_up rounded-md shadow-lg bg-gradient-to-r from-gray-700 to-gray-900 text-white hover:opacity-90 text-xl py-2 px-4 mr-1"
-            >
-              {modalType === 'update' ? '수정완료' : '할일 추가하기'}
-            </button>
           </div>
         </div>
       </div>
+
       <ToastContainer
         position="top-center"
         autoClose={3000}
@@ -241,8 +252,8 @@ const Modal = ({ handleSave }) => {
         closeOnClick
         pauseOnHover
         draggable
-        className="text-sm" // 전체 컨테이너에 작은 텍스트 적용
-        bodyClassName="text-sm" // 본문 텍스트 크기 조정
+        className="text-sm"
+        bodyClassName="text-sm"
       />
     </>
   );

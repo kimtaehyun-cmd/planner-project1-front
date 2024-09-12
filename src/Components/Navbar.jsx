@@ -21,7 +21,7 @@ const Navbar = () => {
     if (authData) {
       e.preventDefault();
       const userConfirmed = window.confirm(
-        '로그 아웃 됩니다. 로그아웃 하시겠습니까?'
+        '로그아웃 됩니다. 로그아웃 하시겠습니까?'
       );
       if (userConfirmed) {
         dispatch(logout()); // 리덕스 상태 초기화

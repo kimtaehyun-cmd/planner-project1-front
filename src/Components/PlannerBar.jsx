@@ -127,7 +127,7 @@ const PlannerBar = () => {
     <div className="flex h-full p-4">
       <div className="w-1/3 p-4 border-gray-300">
         <div className="bg-white p-4 rounded-lg shadow-custom ">
-          <h2 className="text-xl w-full font-bold flex justify-between mb-4 pl-1">
+          <h2 className="text-xl w-full font-bold flex justify-between mb-4 pl-5">
             {authData.name}님 여행 계획
             {/* 새로 만든 수정 및 삭제 버튼 */}
             <div className="">
@@ -206,7 +206,10 @@ const PlannerBar = () => {
                   >
                     <div className="bg-gray-400 shadow-xl rounded-xl overflow-hidden h-[95%] w-full mx-auto p-1">
                       <div className="bg-gray-100 text-gray-600 py-4 px-4 rounded-lg mb-1">
-                        <h3 className="text-xl font-semibold">
+                        <h3
+                          className="text-xl font-semibold"
+                          style={{ fontFamily: 'Courgette' }}
+                        >
                           {item.planner_title ||
                             '프로젝트 제목을 입력해주세요...'}
                         </h3>
@@ -235,6 +238,7 @@ const PlannerBar = () => {
                               whiteSpace: 'pre-wrap',
                               wordBreak: 'break-word',
                               height: '364.3px',
+                              fontFamily: 'Courgette',
                             }}
                           >
                             {item.planner_description ||

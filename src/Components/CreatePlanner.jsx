@@ -91,17 +91,23 @@ const Createplanner = () => {
     }
   };
 
-  const handleMain = async (item) => {
-    if (handleMain)
+  const handleMain = async () => {
+    const confirmDelete = window.confirm(
+      '여행정보가 삭제됩니다. 삭제하시겠습니까?'
+    );
+
+    if (confirmDelete) {
       try {
         await axios.delete(
           `https://planner.aiprojectt.com/delete_travel_data/${authData.user_idx}/${projectIdx}`
         );
-
         navigate('/');
       } catch (error) {
         console.error('데이터 삭제 중 오류 발생:', error);
       }
+    } else {
+      console.log('삭제가 취소되었습니다.');
+    }
   };
 
   return (

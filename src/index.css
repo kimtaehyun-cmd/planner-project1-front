@@ -144,7 +144,7 @@ body {
 }
 
 .custom-calendar .rdrDayNumber span {
-  font-size: 1rem; /* Adjust day number font size */
+  font-size: 1.3rem; /* Adjust day number font size */
 }
 
 .custom-calendar .rdrDayToday span {

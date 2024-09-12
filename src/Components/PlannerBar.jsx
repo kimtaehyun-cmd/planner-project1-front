@@ -264,12 +264,12 @@ const PlannerBar = () => {
                           >
                             수정
                           </button>
-                          <button
+                          {/* <button
                             className="bg-gray-800 hover:bg-gray-700 text-white p-1 rounded"
                             onClick={() => handleDelete(item)}
                           >
                             삭제
-                          </button>
+                          </button> */}
                         </div>
                       </div>
                     </div>

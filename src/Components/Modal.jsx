@@ -173,12 +173,13 @@ const Modal = ({ handleSave }) => {
 
               {/* 이미지와 설명 부분 높이를 더 키움 */}
               <div className="content h-[80%] mb-2 flex gap-2">
-                <div className="photo_wrapper border rounded-md border-gray-400 bg-white w-1/2 h-full flex items-center justify-center relative overflow-hidden">
+                <div className="photo_wrapper border rounded-md border-gray-400 bg-white w-1/2 h-[400px] flex items-center justify-center relative overflow-hidden">
                   {imagePreview ? (
                     <img
                       src={imagePreview}
                       alt="Preview"
                       className="object-cover w-full h-full"
+                      style={{ objectFit: 'cover' }}
                     />
                   ) : (
                     <span className="text-gray-500">사진 넣기</span>

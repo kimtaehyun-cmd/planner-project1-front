@@ -74,11 +74,11 @@ const Calendar = () => {
 
   return (
     <div className="w-3/5 h-[80%] flex flex-col justify-center items-center">
-      <div className="w-[70%] h-[90%] bg-slate-200 p-4 rounded shadow-lg flex mr-4 border border-gray-400">
+      <div className="w-[70%] h-[90%] bg-slate-100 p-4 rounded shadow-lg flex mr-4 border border-gray-400">
         {loading ? (
           <div>Loading...</div> // 로딩 중일 때 표시되는 메시지
         ) : (
-          <div className="h-full flex justify-center items-center mb-4 pl-4">
+          <div className="h-full flex justify-center items-center pl-4">
             <DateRangePicker
               ranges={[selectionRange]} // 선택된 날짜 범위를 설정
               onChange={handleSelect} // 날짜 선택 시 호출되는 함수
@@ -92,7 +92,7 @@ const Calendar = () => {
         <div className="mt- mr-1">
           <button
             onClick={handleSaveDates}
-            className="bg-gray-900 text-white py-2 px-10 rounded hover:bg-gray-700 ml-6"
+            className="bg-gray-900 text-white py-2 px-10 rounded hover:bg-gray-700 ml-6 mt-4"
           >
             날짜 선택
           </button>

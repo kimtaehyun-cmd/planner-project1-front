@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom'; // useNavigate 추가
 import { FaCaretDown, FaCaretUp } from 'react-icons/fa6';
 import { useSelector } from 'react-redux';
-// import logo192 from '/logo192.png'
+import { FaArrowRight } from 'react-icons/fa';
 
 const TravelProjectList = () => {
   const [getTravelData, setGetTravelData] = useState([]);
@@ -12,6 +12,7 @@ const TravelProjectList = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [toggle, setToggle] = useState(false);
   const authData = useSelector((state) => state.auth.authData);
+  const navigate = useNavigate(); // useNavigate 훅 사용
 
   useEffect(() => {
     const fetchData = async () => {
@@ -38,6 +39,11 @@ const TravelProjectList = () => {
     setToggle(!toggle);
   };
 
+  // 여행 계획하기 버튼 클릭 시 calendarpage로 이동
+  const goToCalendarPage = () => {
+    navigate('/calendarpage');
+  };
+
   // Determine the number of projects to show based on the toggle state
   const displayedProjects = toggle ? getTravelData : getTravelData.slice(0, 5);
 
@@ -45,9 +51,19 @@ const TravelProjectList = () => {
     <div className="w-1/3 p-4 border-r h-full border-gray-300">
       <div className="sidebar-wrapper h-full flex flex-col">
         <div className="project_side_bar_box bg-white p-4 rounded-lg shadow-custom h-full">
-          <h2 className="text-xl font-bold mb-4 pl-7 ">
-            {authData.name}님 여행정보
-          </h2>
+          <div className="flex justify-between items-center mb-4">
+            <h2 className="text-xl font-bold pl-7 ">
+              {authData.name}님 여행정보
+            </h2>
+            {/* 여행 계획하기 버튼 추가 */}
+            <button
+              onClick={goToCalendarPage}
+              className="flex items-center justify-between px-4 py-2 bg-blue-400 rounded-full text-white font-semibold shadow-lg hover:bg-blue-500 transition duration-300 ease-in-out"
+            >
+              여행 계획하기
+              <FaArrowRight className="ml-4" />
+            </button>
+          </div>
           <div className="inner-sidebar-wrapper flex flex-col h-full">
             <div
               className={`Project_side_bar_wrapper bg-gray-100 p-3 rounded-lg shadow-md ${

@@ -1,9 +1,7 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.css'; // 최신 Swiper CSS 경로
-import 'swiper/css'; // Swiper 기본 CSS 파일
-
-// 필요한 모듈을 Swiper 패키지에서 개별적으로 가져옴
+import 'swiper/swiper-bundle.css';
+import 'swiper/css';
 import { Navigation, Autoplay } from 'swiper/modules';
 
 const SlideSection = () => {
@@ -49,23 +47,30 @@ const SlideSection = () => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
+  useEffect(() => {
+    // Swiper가 초기화된 후 네비게이션 버튼을 설정하도록 함
+    const handleSwiper = (swiper) => {
+      if (prevRef.current && nextRef.current) {
+        swiper.params.navigation.prevEl = prevRef.current;
+        swiper.params.navigation.nextEl = nextRef.current;
+        swiper.navigation.init();
+        swiper.navigation.update();
+      }
+    };
+  }, []);
+
   return (
     <div className="SlideSection_container flex flex-col items-center mt-10 mb-10 relative">
       <Swiper
-        loop={true} // 루프 설정
+        loop={true}
         speed={1500}
         autoplay={{ delay: 5000 }}
         navigation={{
-          prevEl: prevRef.current, // 이전 버튼 Ref
-          nextEl: nextRef.current, // 다음 버튼 Ref
+          prevEl: prevRef.current,
+          nextEl: nextRef.current,
         }}
-        modules={[Navigation, Autoplay]} // 모듈 추가
-        onInit={(swiper) => {
-          swiper.params.navigation.prevEl = prevRef.current;
-          swiper.params.navigation.nextEl = nextRef.current;
-          swiper.navigation.init();
-          swiper.navigation.update();
-        }}
+        modules={[Navigation, Autoplay]}
+        onSwiper={handleSwiper}
         className="w-full"
       >
         {images.map((image, index) => (
@@ -94,7 +99,6 @@ const SlideSection = () => {
         ))}
       </Swiper>
 
-      {/* 커스텀 이전 버튼 */}
       <button
         ref={prevRef}
         className="absolute left-[40px] top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg opacity-90 w-12 h-12 flex items-center justify-center z-20"
@@ -102,7 +106,6 @@ const SlideSection = () => {
         &#10094;
       </button>
 
-      {/* 커스텀 다음 버튼 */}
       <button
         ref={nextRef}
         className="absolute right-[40px] top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg opacity-90 w-12 h-12 flex items-center justify-center z-20"

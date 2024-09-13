@@ -8,7 +8,7 @@ const Itempanel = () => {
     <div className="Itempannel_container w-3/5 p-1">
       <div className="Itempannel_wrapper h-full flex flex-col items-center">
         <div
-          className="p-1 m-1 shadow-xl"
+          className="p-1 m-1 shadow-xl rounded-md"
           style={{
             width: '80%',
             height: '90%',

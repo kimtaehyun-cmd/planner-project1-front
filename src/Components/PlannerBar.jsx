@@ -129,11 +129,17 @@ const PlannerBar = () => {
         <div className="bg-white p-4 rounded-lg shadow-custom ">
           <h2 className="text-xl w-full font-bold flex justify-between mb-4 pl-5">
             {authData.name}님 여행 계획
-            {/* 새로 만든 수정 및 삭제 버튼 */}
+            {/* 새로 만든 목록, 수정 및 삭제 버튼 */}
             <div className="">
               <button
+                onClick={() => navigate('/travelproject')}
+                className="bg-gray-800 hover:bg-gray-700 text-white p-1 rounded"
+              >
+                목록
+              </button>
+              <button
                 onClick={handleNavigateToPlanner}
-                className="bg-gray-500 hover:bg-gray-400 text-white p-1 rounded"
+                className="bg-gray-500 hover:bg-gray-400 text-white p-1 rounded ml-2"
               >
                 수정
               </button>
@@ -262,14 +268,8 @@ const PlannerBar = () => {
                             className="bg-gray-500 hover:bg-gray-400 text-white p-1 rounded"
                             onClick={() => handleEdit(item)}
                           >
-                            수정
+                            🖊️수정
                           </button>
-                          {/* <button
-                            className="bg-gray-800 hover:bg-gray-700 text-white p-1 rounded"
-                            onClick={() => handleDelete(item)}
-                          >
-                            삭제
-                          </button> */}
                         </div>
                       </div>
                     </div>

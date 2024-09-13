@@ -17,18 +17,18 @@ import Aboutcity from './Aboutcity';
 import { AboutcityData } from '../constants/mockData';
 
 const imageMap = {
-  1: travelImage, // Tongyeong
-  2: travelImage2, // Busan
-  3: travelImage3, // Gapyeong
-  4: travelImage4, // Damyang
-  5: travelImage5, // Gyeongju
-  6: travelImage6, // Incheon
-  7: travelImage7, // Jeju
-  8: travelImage8, // Jeonju
-  9: travelImage9, // Namwon
-  10: travelImage10, // Ulleung
-  11: travelImage11, // Seoul
-  12: travelImage12, // Gangneung
+  1: travelImage,
+  2: travelImage2,
+  3: travelImage3,
+  4: travelImage4,
+  5: travelImage5,
+  6: travelImage6,
+  7: travelImage7,
+  8: travelImage8,
+  9: travelImage9,
+  10: travelImage10,
+  11: travelImage11,
+  12: travelImage12,
 };
 
 const Favorite = () => {

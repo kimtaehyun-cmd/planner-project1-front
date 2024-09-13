@@ -6,8 +6,8 @@ import Sidebar from './Sidebar';
 import Navbar from './Navbar';
 import { TfiWrite } from 'react-icons/tfi';
 import { MdClose } from 'react-icons/md';
-import { toast, ToastContainer } from 'react-toastify'; // Toast 기능을 추가
-import 'react-toastify/dist/ReactToastify.css'; // Toast 스타일을 추가
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Createplanner = () => {
   const navigate = useNavigate();
@@ -47,10 +47,9 @@ const Createplanner = () => {
 
   const handleSave = async () => {
     if (!projectTitle) {
-      // 제목이 비어있을 때 Toast 알림 표시
       toast.error('제목을 입력해주세요!', {
         position: 'top-center',
-        autoClose: 3000, // 3초 후에 자동 닫힘
+        autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -151,8 +150,8 @@ const Createplanner = () => {
                         id="projectTitle"
                         name="projectTitle"
                         placeholder="제목을 입력해주세요."
-                        value={projectTitle} // 입력된 제목을 상태에서 가져옴
-                        onChange={handleChange} // 제목 입력 시 상태 업데이트
+                        value={projectTitle}
+                        onChange={handleChange}
                         className="Logo_text bg-white w-full rounded-md text-gray-800 input-placeholder p-3 border border-slate-300"
                       />
                       <input

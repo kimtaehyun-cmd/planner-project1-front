@@ -151,7 +151,6 @@ const Modal = ({ handleSave }) => {
                 </button>
               </div>
 
-              {/* 제목 부분의 높이를 줄임 */}
               <div className="location border rounded-md border-gray-400 bg-white mb-2 p-4 w-full h-[10%] flex justify-center items-center">
                 <div className="input-control w-full h-full">
                   <label htmlFor="planner_title" className="w-full h-full">
@@ -171,7 +170,6 @@ const Modal = ({ handleSave }) => {
                 </div>
               </div>
 
-              {/* 이미지와 설명 부분 높이를 더 키움 */}
               <div className="content h-[80%] mb-2 flex gap-2">
                 <div className="photo_wrapper border rounded-md border-gray-400 bg-white w-1/2 h-[400px] flex items-center justify-center relative overflow-hidden">
                   {imagePreview ? (
@@ -231,7 +229,6 @@ const Modal = ({ handleSave }) => {
                 </div>
               </div>
 
-              {/* 버튼을 하단에 배치 */}
               <div className="Save_button_container flex items-end justify-end">
                 <button
                   type="submit"

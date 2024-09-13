@@ -39,12 +39,10 @@ const TravelProjectList = () => {
     setToggle(!toggle);
   };
 
-  // 여행 계획하기 버튼 클릭 시 calendarpage로 이동
   const goToCalendarPage = () => {
     navigate('/calendarpage');
   };
 
-  // Determine the number of projects to show based on the toggle state
   const displayedProjects = toggle ? getTravelData : getTravelData.slice(0, 5);
 
   return (

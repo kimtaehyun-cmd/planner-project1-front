@@ -12,7 +12,6 @@ const Navbar = () => {
   const authData = useSelector((state) => state.auth.authData);
   const navigate = useNavigate();
 
-  // 모달 창 닫기 처리 함수
   const handleCloseModal = () => {
     dispatch(closeModal());
   };
@@ -24,10 +23,10 @@ const Navbar = () => {
         '로그아웃 됩니다. 로그아웃 하시겠습니까?'
       );
       if (userConfirmed) {
-        dispatch(logout()); // 리덕스 상태 초기화
-        navigate('/'); // 루트 페이지로 리디렉션
+        dispatch(logout());
+        navigate('/');
       } else {
-        navigate('/'); // 루트 페이지로 리디렉션
+        navigate('/');
       }
     }
   };

@@ -13,9 +13,9 @@ const Sidebar = () => {
         '로그인이 필요한 페이지입니다. 로그인 하시겠습니까?'
       );
       if (userConfirmed) {
-        navigate('/login'); // 로그인 페이지로 리디렉션
+        navigate('/login');
       } else {
-        navigate('/'); // 루트 페이지로 리디렉션
+        navigate('/');
       }
     }
   };

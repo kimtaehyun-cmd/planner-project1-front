@@ -16,10 +16,10 @@ const AdSection = () => {
     subText: 'My Travel Planner',
   };
 
-  const imageWidth = 450; // 넓어진 이미지 너비
-  const imageHeight = 270; // 이미지 높이
-  const longImageWidth = 1450; // 긴 이미지 너비 (3개의 이미지 너비를 더한 값에서 마진을 뺀 값)
-  const longImageHeight = 400; // 긴 이미지 높이
+  const imageWidth = 450;
+  const imageHeight = 270;
+  const longImageWidth = 1450;
+  const longImageHeight = 400;
 
   return (
     <div className="AdSection_container flex flex-col justify-center items-center mt-10 bg-white p-4">
@@ -70,7 +70,7 @@ const AdSection = () => {
         ))}
       </div>
 
-      {/* 긴 이미지 추가 */}
+      {/* 긴 이미지 */}
       <div className="mt-10 p-1 relative">
         <img
           src={longAd.src}
@@ -86,7 +86,7 @@ const AdSection = () => {
         <div
           style={{
             position: 'absolute',
-            top: '30px', // 왼쪽 상단으로 위치 조정
+            top: '30px',
             left: '10px',
             color: 'white',
             fontWeight: 'bold',
@@ -95,7 +95,7 @@ const AdSection = () => {
             borderRadius: '3px',
             padding: '10px 20px',
             cursor: 'pointer',
-            textAlign: 'left', // 왼쪽 정렬
+            textAlign: 'left',
             textShadow: '2px 2px 4px rgba(0, 0, 0, 0.7)',
           }}
           className="hover:bg-opacity-75 transition-opacity"
@@ -105,8 +105,8 @@ const AdSection = () => {
             style={{
               fontSize: '16px',
               marginTop: '5px',
-              textAlign: 'left', // 왼쪽 정렬 유지
-              color: 'white', // 글씨 색상
+              textAlign: 'left',
+              color: 'white',
               marginLeft: '3px',
             }}
           >

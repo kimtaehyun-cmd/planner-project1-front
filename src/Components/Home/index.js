@@ -4,14 +4,13 @@ import Itempanel from '../Itempanel';
 import Sidebar from '../Sidebar';
 import Footer from '../Footer';
 import SlideSection from '../SlideSection';
-import AdImgSection from '../AdImgSection'; // AdSection 컴포넌트 추가
+import AdImgSection from '../AdImgSection';
 
 const Index = () => {
   const [isFooterVisible, setFooterVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      // Check if the user has scrolled to the bottom of the page
       if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
         setFooterVisible(true);
       } else {
@@ -21,7 +20,6 @@ const Index = () => {
 
     window.addEventListener('scroll', handleScroll);
 
-    // Cleanup the event listener on component unmount
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };

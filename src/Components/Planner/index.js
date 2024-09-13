@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
-// import Sidebar from '../Sidebar';
 import PlannerBar from '../PlannerBar';
 
 const index = () => {

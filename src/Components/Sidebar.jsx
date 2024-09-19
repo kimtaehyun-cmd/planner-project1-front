@@ -29,7 +29,7 @@ const Sidebar = () => {
           </span>
           <br />
           <span className="Introduce_text text-xl border-2 border-white text-left mt-2 p-1 pl-24 font-gothicA1 font-semibold">
-            당신의 꿈을 현실로 만드는 특별한 계획, 지금 시작하세요!
+            당신의 꿈을 현실로 만드는 특별한 계획, 지금 시작하세요 !
           </span>
         </p>
       </div>

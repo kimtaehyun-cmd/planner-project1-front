@@ -132,7 +132,8 @@ body {
 
 /* calendar custom text */
 .custom-calendar .rdrCalendarWrapper {
-  font-size: 1.3rem;
+  width: 100%;
+  font-size: 1.2rem;
   color: #1f2937;
 }
 
@@ -158,9 +159,40 @@ body {
   display: none;
 }
 
+.rdrMonths {
+  display: flex; /* Flexbox 사용 */
+  justify-content: space-between; /* 요소들 간의 공간을 균등하게 분배 */
+  width: 100%; /* 부모 div에 꽉 차게 설정 */
+}
+
+.rdrMonths > * { 
+  flex: 2; /* 자식 요소들의 가로 길이를 동일하게 맞춤 */
+  margin: 0 110px; /* 각 요소 사이에 약간의 간격을 추가 (필요한 경우) */
+  box-sizing: border-box; /* 패딩과 테두리도 가로 길이에 포함되도록 설정 */
+}
+
+.rdrDays {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -80px;
+}
+
+.rdrWeekDays {
+  margin: 0 -80px;
+}
+
+.custom-calendar .rdrWeekDay {
+  color: black;
+  font-size: 1.3rem;
+}
+
 .input-placeholder::placeholder {
   font-weight: bold; /* Make placeholder text bold */
   color: #868e96;
+}
+
+.rdrDateDisplayWrapper {
+  display: none;
 }
 
 .textarea::placeholder{
@@ -186,4 +218,26 @@ body {
   min-height: 100%;
   max-height: 100%;
   object-fit: cover;
+}
+
+.rdrMonthAndYearPickers {
+  display: flex; /* flexbox로 요소 정렬 */
+}
+
+.rdrMonthPicker {
+  order: 2; /* 월 선택기를 두 번째로 배치 */
+}
+
+.rdrYearPicker {
+  order: 1; /* 연도 선택기를 첫 번째로 배치 */
+}
+
+/* 일요일 - 빨간색으로 */
+.rdrDay.rdrDayStartOfWeek .rdrDayNumber span {
+  color: #D32F2F !important; /* Medium Red (약간 어두운 빨간색) */
+}
+
+/* 토요일 - 밝은 파란색 */
+.rdrDay.rdrDayEndOfWeek .rdrDayNumber span {
+  color: #3B82F6 !important; /* Bright Blue (선명한 파란색) */
 }

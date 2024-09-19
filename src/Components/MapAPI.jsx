@@ -7,7 +7,7 @@ const mapContainerStyle = {
   marginLeft: '5%',
   borderRadius: '20px',
   overflow: 'hidden',
-  border: '3px solid #2c3e50',
+  border: '2px solid #2c3e50',
   boxShadow: '0 8px 16px rgba(0, 0, 0, 0.4)',
 };
 

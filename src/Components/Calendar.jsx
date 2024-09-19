@@ -29,9 +29,6 @@ const Calendar = () => {
       endDate: today,
       key: 'selection',
     });
-
-    // 기존의 서버로부터 데이터를 가져오는 로직을 제거하거나 주석 처리합니다.
-    // fetchCalendarData(); // 기존에 데이터를 가져오는 함수를 사용하지 않음
   }, []); // 컴포넌트가 마운트될 때 한 번만 실행
 
   // DateRangePicker에서 날짜가 선택될 때 호출되는 함수
@@ -72,27 +69,53 @@ const Calendar = () => {
       });
   };
 
+  useEffect(() => {
+    const addYearSuffix = () => {
+      const yearPicker = document.querySelector('.rdrYearPicker select'); // <select> 요소 선택
+
+      if (yearPicker) {
+        const options = yearPicker.options;
+        for (let i = 0; i < options.length; i++) {
+          const year = options[i].textContent;
+          if (!year.includes('년')) {
+            options[i].textContent = `${year}년`; // 연도 뒤에 '년' 붙이기
+          }
+        }
+      }
+    };
+
+    addYearSuffix(); // 컴포넌트가 렌더링된 후 연도에 '년'을 붙임
+  }, []); // 컴포넌트가 처음 마운트될 때 한 번만 실행
+
   return (
     <div className="w-3/5 h-[80%] flex flex-col justify-center items-center">
-      <div className="w-[70%] h-[90%] bg-slate-100 p-4 rounded shadow-lg flex mr-4 border border-gray-400">
+      <div className="w-[70%] h-[90%] p-4 rounded-xl shadow-lg flex flex-col border border-gray-400">
+        <div
+          className="inline-block text-center p-2 text-3xl mb-4 border-b-2 border-black"
+          style={{ width: 'fit-content', margin: '0 auto' }}
+        >
+          여행 기간이 어떻게 되시나요?
+        </div>
+
         {loading ? (
           <div>Loading...</div> // 로딩 중일 때 표시되는 메시지
         ) : (
-          <div className="h-full flex justify-center items-center pl-4">
+          <div className="flex-grow flex justify-center items-center pl-4">
             <DateRangePicker
               ranges={[selectionRange]} // 선택된 날짜 범위를 설정
               onChange={handleSelect} // 날짜 선택 시 호출되는 함수
-              className="w-full h-[90%] custom-calendar"
+              className="w-full h-full custom-calendar"
               staticRanges={[]} // 프리셋 범위 비활성화
               inputRanges={[]} // 입력 범위 비활성화
               locale={ko} // DateRangePicker의 로케일을 한국어로 설정
             />
           </div>
         )}
-        <div className="mt- mr-1">
+        {/* 날짜 선택 버튼을 우측으로 정렬 */}
+        <div className="mt-4 flex justify-end mr-4">
           <button
             onClick={handleSaveDates}
-            className="bg-gray-900 text-white py-2 px-10 rounded hover:bg-gray-700 ml-6 mt-4"
+            className="bg-gray-900 text-white py-2 px-10 rounded hover:bg-gray-700"
           >
             날짜 선택
           </button>

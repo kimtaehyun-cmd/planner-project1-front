@@ -33,7 +33,7 @@ __Version Control__: Git, GitHub
 ---
 프론트엔드는 __React__ 기반으로 구축되었으며, 사용자에게 동적인 웹 인터페이스를 제공합니다. __Redux__ 를 통해 상태 관리를 하고, __Axios__ 를 사용하여 백엔드 API와 통신합니다.
 
-#### Front-End 설치 및 실행
+#### - Front-End 설치 및 실행
 ---
 1. 프로젝트의 __front-end__ 폴더로 이동합니다.
 2. 필요한 패키지를 설치합니다:
@@ -42,7 +42,7 @@ __Version Control__: Git, GitHub
 <img src="./src/assets/프론트 설치 실행 과정 2.PNG">
 4. http://localhost:3000 에서 애플리케이션을 확인할 수 있습니다.
 
-#### Front-End 구조
+#### - Front-End 구조
 ---
 ```
 front-end/
@@ -83,7 +83,7 @@ front-end/
 └── README.md              # 프로젝트 설명서
 ```
 
-#### Front-End 주요 기능
+#### - Front-End 주요 기능
 ---
 1. __사용자 인증__
    + 사용자 로그인 및 회원가입 기능.

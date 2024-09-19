@@ -24,3 +24,10 @@ __My Travel Planner__ 은 사용자가 지도와 다양한 추천 패널을 통�
 ### 📝프로젝트 개요
 ---
 이 프로젝트는 __React.js__ 와 __Node.js__ 기반의 풀스택 애플리케이션입니다. 프론트엔드는 사용자의 요청을 받아 백엔드 서버와 통신하고, 백엔드는 데이터베이스와 상호작용하여 데이터를 처리하고 응답합니다.
+
+### 기술 스택
+---
++ Front-End: React, Redux, Tailwind CSS, Axios
++ Back-End: Node.js, Express, PostgreSQL, JWT
++ Database: PostgreSQL
++ Version Control: Git, GitHub

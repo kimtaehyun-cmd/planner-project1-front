@@ -27,7 +27,7 @@ __My Travel Planner__ 은 사용자가 지도와 다양한 추천 패널을 통�
 
 ### 기술 스택
 ---
-+ __Front-End__: React, Redux, Tailwind CSS, Axios
-+ __Back-End__: Node.js, Express, PostgreSQL, JWT
++ __Front-End__: React, Redux, Tailwind CSS
++ __Back-End__: Node.js, PostgreSQL
 + __Database__: PostgreSQL
 + __Version Control__: Git, GitHub

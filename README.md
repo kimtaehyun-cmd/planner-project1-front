@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# My Travel Planner
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 👨‍🏫프로젝트 소개
+---
+__My Travel Planner__ 은 사용자가 지도와 다양한 추천 패널을 통해 여행 명소를 추천받고, 
+그 정보를 바탕으로 여행 계획을 세울 수 있는 풀스택 웹 애플리케이션입니다.
+여행을 다녀온 후에는 여행 일지를 작성할 수 있는 기능도 제공하고 있습니다.
 
-## Available Scripts
+### 🧾목차
+---
+1. 프로젝트 개요
+2. 기술 스택
+3. Front-End
+  + 설치 및 실행
+  + 구조
+  + 주요 기능
+4. API 문서
+5. 기여 방법
 
-In the project directory, you can run:
+### 📝프로젝트 개요
+---
+이 프로젝트는 __React.js__ 와 __Node.js__ 기반의 풀스택 애플리케이션입니다. 프론트엔드는 사용자의 요청을 받아 백엔드 서버와 통신하고, 백엔드는 데이터베이스와 상호작용하여 데이터를 처리하고 응답합니다.
 
-### `npm start`
+### 🔧기술 스택
+---
++ __Front-End__: React, Redux, Tailwind CSS, Axios
++ __Back-End__: Node.js, PostgreSQL
++ __Database__: PostgreSQL
++ __Version Control__: Git, GitHub
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Front-End
+---
+프론트엔드는 __React__ 기반으로 구축되었으며, 사용자에게 동적인 웹 인터페이스를 제공합니다. __Redux__ 를 통해 상태 관리를 하고, __Axios__ 를 사용하여 백엔드 API와 통신합니다.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### Front-End 설치 및 실행
+1. 프로젝트의 __front-end__ 폴더로 이동합니다.
+2. 필요한 패키지를 설치합니다:
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+! [설치과정 1](./src/assets/프론트 설치 실행 과정 1.PNG)

@@ -42,7 +42,7 @@ __My Travel Planner__ 은 사용자가 지도와 다양한 추천 패널을 통�
 
 #### Front-End 구조
 ---
-``
+```
 front-end/
 │
 ├── public/                # 정적 파일 (favicon, index.html 등)

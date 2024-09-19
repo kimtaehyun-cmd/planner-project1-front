@@ -41,7 +41,7 @@ __Version Control__: Git, GitHub
 <img src="./src/assets/프론트 설치 실행 과정 1.PNG">
 3. 애플리케이션을 실행합니다:
 <img src="./src/assets/프론트 설치 실행 과정 2.PNG">
-4. **http://localhost:3000** 에서 애플리케이션을 확인할 수 있습니다.
+4. http://localhost:3000 에서 애플리케이션을 확인할 수 있습니다.
 
 #### Front-End 구조
 ---

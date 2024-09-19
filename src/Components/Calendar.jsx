@@ -89,10 +89,10 @@ const Calendar = () => {
 
   return (
     <div className="w-3/5 h-[80%] flex flex-col justify-center items-center">
-      <div className="w-[70%] h-[90%] p-4 rounded-xl shadow-lg flex flex-col border border-gray-400">
+      <div className="w-[70%] h-[90%] p-4 rounded-xl shadow-2xl hover:shadow-3xl hover:border-gray-500 flex flex-col border border-gray-400">
         <div
-          className="inline-block text-center p-2 text-3xl mb-4 border-b-2 border-black"
-          style={{ width: 'fit-content', margin: '0 auto' }}
+          className="inline-block text-center text-3xl mb-4 ml-48 p-1 border-b-2 border-gray-600"
+          style={{ width: 'fit-content' }}
         >
           여행 기간이 어떻게 되시나요?
         </div>

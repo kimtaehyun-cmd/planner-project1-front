@@ -232,12 +232,10 @@ body {
   order: 1; /* 연도 선택기를 첫 번째로 배치 */
 }
 
-/* 일요일 - 빨간색으로 */
 .rdrDay.rdrDayStartOfWeek .rdrDayNumber span {
-  color: #D32F2F !important; /* Medium Red (약간 어두운 빨간색) */
+  color: #D32F2F !important;
 }
 
-/* 토요일 - 밝은 파란색 */
 .rdrDay.rdrDayEndOfWeek .rdrDayNumber span {
-  color: #3B82F6 !important; /* Bright Blue (선명한 파란색) */
+  color: #3B82F6 !important;
 }

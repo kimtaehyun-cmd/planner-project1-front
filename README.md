@@ -35,4 +35,5 @@ __My Travel Planner__ 은 사용자가 지도와 다양한 추천 패널을 통�
 #### Front-End 설치 및 실행
 1. 프로젝트의 __front-end__ 폴더로 이동합니다.
 2. 필요한 패키지를 설치합니다:
+
 ! [설치과정 1](https://github.com/kimtaehyun-cmd/planner-project1-front/blob/main/%ED%94%84%EB%A1%A0%ED%8A%B8%20%EC%84%A4%EC%B9%98%20%EC%8B%A4%ED%96%89%20%EA%B3%BC%EC%A0%95%201.PNG)

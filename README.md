@@ -36,3 +36,5 @@ __My Travel Planner__ 은 사용자가 지도와 다양한 추천 패널을 통�
 1. 프로젝트의 __front-end__ 폴더로 이동합니다.
 2. 필요한 패키지를 설치합니다:
 <img src="./src/assets/프론트 설치 실행 과정 1.PNG">
+3. 애플리케이션을 실행합니다:
+<img src="./src/assets/프론트 설치 실행 과정 2.PNG">

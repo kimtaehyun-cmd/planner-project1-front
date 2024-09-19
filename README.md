@@ -14,12 +14,8 @@ __My Travel Planner__ 은 사용자가 지도와 다양한 추천 패널을 통�
   + 설치 및 실행
   + 구조
   + 주요 기능
-4. Back-End
-  + 설치 및 실행
-  + 구조
-  + 주요 기능
-5. API 문서
-6. 기여 방법
+4. API 문서
+5. 기여 방법
 
 ### 📝프로젝트 개요
 ---
@@ -27,7 +23,11 @@ __My Travel Planner__ 은 사용자가 지도와 다양한 추천 패널을 통�
 
 ### 기술 스택
 ---
-+ __Front-End__: React, Redux, Tailwind CSS
++ __Front-End__: React, Redux, Tailwind CSS, Axios
 + __Back-End__: Node.js, PostgreSQL
 + __Database__: PostgreSQL
 + __Version Control__: Git, GitHub
+
+### Front-End
+---
+프론트엔드는 __React__ 기반으로 구축되었으며, 사용자에게 동적인 웹 인터페이스를 제공합니다. __Redux__ 를 통해 상태 관리를 하고, __Axios__ 를 사용하여 백엔드 API와 통신합니다.
